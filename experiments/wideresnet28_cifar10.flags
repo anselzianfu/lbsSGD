@@ -1,0 +1,12 @@
+# lbs/main/train
+--dataset=cifar10
+--model=wideresnet28
+# lbs.training
+--max_batches=150000
+--evaluate_every=1000
+--eval_batches=100
+--persist_every=1000
+--train_val_split=0.7
+--max_samples_per_gpu=512
+# lbs.optimizers
+--learning_rate=0.01

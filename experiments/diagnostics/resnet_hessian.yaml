@@ -1,0 +1,16 @@
+general:
+  gpus: "0,1,2,3"
+  max_bs_per_gpu: 512
+
+training:
+  use_gpu: True
+
+logging:
+  verbose: True
+  log_dir: ./logs
+  experiment_name: baseline_resnet34_cifar10
+  k: 50     # Number of eigenvalues for lanczos
+  steps: 15 # Steps for power iteration
+
+model:
+  name: resnet34

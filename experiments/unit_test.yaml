@@ -1,0 +1,9 @@
+seed:
+    grid_search: [1, 2]
+max_batches: 4
+persist_every: 4
+batch_size:
+    grid_search: [4, 8]
+eval_batches: 1
+dataset: mnist
+model: lenet

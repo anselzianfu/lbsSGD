@@ -1,0 +1,37 @@
+# General settings
+general:
+  name: C1
+  description: "Reproducing results of the paper by Yao et al. (1802.08241 on arxiv) for the small C1 network"
+  parallelize: True
+  mode: train,test
+  max_bs_per_gpu: 1024
+  use_gpu: True
+  num_trials: 4
+
+# Dataset options
+dataset:
+  name: CIFAR10 
+  datadir: ./data/cifar
+
+logging:
+  verbose: True
+  save_results: True
+  save_dir: ./c1_logs/
+  checkpoint_epochs: 1 # Save model info every x epochs
+  evaluation_iters: 250 # Evaluate model every x iterations
+  save_iters: 2500
+
+model: 
+  name: 'C1'
+  
+training:
+  optimizer: SGD # Must match 'SGD' or name of class in src/optimizers.py!
+  learning_rate: 0.01
+  num_epochs: 100
+  iterations: 25000
+  epochs: 200
+  weight_decay: 0.0
+  lr_decay_ratio: .2
+  epoch_step: 10000000
+  mini_batch_size: 512
+  momentum: 0.9

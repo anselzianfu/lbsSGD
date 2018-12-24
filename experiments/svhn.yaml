@@ -1,0 +1,18 @@
+dataset: svhn
+model: resnet34
+seed: 1
+learning_rate: 0.1
+linear_lr:
+    grid_search: [true, false]
+baseline_bz: 32
+batch_size:
+    grid_search: [32, 128, 512, 2048, 8192, 32768]
+max_epochs: 25
+persist_n: 50
+evaluate_every: 0
+warmup_epochs: 4
+eval_batches: 4
+eval_batch_size: 256
+max_samples_per_gpu: 256
+train_val_split: 1.0
+dataroot: /work/noah.golmant/svhn/data

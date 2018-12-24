@@ -1,0 +1,17 @@
+dataset: cifar10
+model: resnet34
+seed: 1
+learning_rate: 0.1
+linear_lr:
+    grid_search: [true, false]
+baseline_bz: 32
+batch_size:
+    grid_search: [16, 32, 64, 128, 512, 1024, 2048, 4096, 8192, 16384, 32768]
+max_epochs: 200
+persist_n: 50
+evaluate_every: 0
+warmup_epochs: 10
+eval_batches: 4
+eval_batch_size: 512
+max_samples_per_gpu: 512
+train_val_split: 1.0

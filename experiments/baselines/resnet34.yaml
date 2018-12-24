@@ -1,0 +1,35 @@
+# General settings
+general:
+  name: baseline_resnet34_cifar10
+  description: "Baseline for ResNet 34  on CIFAR-10"
+  mode: train,test
+  max_bs_per_gpu: 512
+  num_trials: 4
+  use_gpu: True
+
+# Dataset options
+dataset:
+  name: CIFAR10 
+  datadir: ./data/cifar
+
+logging:
+  verbose: True
+  save_dir: ./logs/
+  checkpoint_epochs: 1   # Save model info every x epochs
+  evaluation_iters: 250  # Evaluate model every x iterations
+  save_iters: 2500       # Save out model checkpoint every x iterations
+
+model:
+  name: 'resnet34'
+  checkpoint: 
+  
+training:
+  optimizer: SGD # Must match 'SGD' or name of class in src/optimizers.py!
+  learning_rate: 0.1
+  iterations: 25000
+  epochs: 200         # Run max(iterations, epochs*(iters per epoch)) iterations
+  mini_batch_size: 128
+  weight_decay: 0.0
+  epoch_step: 100000   # Basically just don't decay
+  lr_decay_ratio: 0.2
+  momentum: 0.0
