@@ -1,5 +1,5 @@
 
-# Large Batch Sizes for Neural Networks [![Build Status](https://travis-ci.com/noahgolmant/lbs.svg?token=xThsvxkUuvjNHcvWFXjT&branch=master)](https://travis-ci.com/noahgolmant/lbs)
+# Large Batch Sizes for Neural Networks
 
 ## Setup
 
